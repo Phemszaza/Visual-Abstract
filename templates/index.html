@@ -1,0 +1,85 @@
+<!--DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Post Generator</title>
+</head>
+<body>
+    <h1>Social Media Post Generator</h1>
+    <form method="POST" action="/index">
+        <label for="research_text">Input the abstract to generate your Social Media Post:</label>
+        <br>
+        <textarea id="research_text" name="research_text" rows="5" cols="50"></textarea>
+        <br>
+        <input type="radio" id="twitter" name="social_media" value="twitter" checked>
+        <label for="twitter">Generate Twitter Post</label>
+        <br>
+        <input type="radio" id="linkedin" name="social_media" value="linkedin">
+        <label for="linkedin">Generate LinkedIn Post</label>
+        <br>
+        <input type="radio" id="instagram" name="social_media" value="instagram">
+        <label for="instagram">Generate Instagram Post</label>
+        <br>
+        <input type="submit" value="Generate Post">
+    </form>
+    <br>
+    {% if twitter_post %}
+        <h3>Twitter Post:</h3>
+        <p>{{ twitter_post }}</p>
+    {% elif linkedin_post %}
+        <h3>LinkedIn Post:</h3>
+        <p>{{ linkedin_post }}</p>
+    {% elif instagram_post %}
+        <h3>Instagram Post:</h3>
+        <p>{{ instagram_post }}</p>
+    {% endif %}
+</body>
+</html-->
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="v4_94"><span class="v4_108">How it work</span><span class="v4_109">Try for free</span>
+        <div class="v4_110">
+            <div class="v4_111"></div><span class="v4_112">Sign Up</span>
+        </div>
+        <div class="v4_113">
+            <div class="v4_114"></div><span class="v4_115">Sign In</span>
+        </div>
+        <div class="v4_117"></div>
+        <div class="v6_177"></div>
+        <div class="v9_303"></div>
+        <div class="v6_180">
+            <div class="v6_168"></div>
+            <div class="v6_101"></div>
+            <div class="v6_165"></div>
+            <div class="v6_166"></div>
+            <div class="v6_167"></div><span class="v4_148"><textarea id="research_text" name="research_text" rows="20" cols="63">Add your recerch</textarea> </span>
+                     
+            
+            <span class="v4_149">Add link*
+            </span><span class="v6_104">Add Authors*</span><span class="v6_106">Add Journal Name*</span><span
+                class="v4_151">Additional info</span>
+            <div class="v4_128"></div>
+            <div class="v6_176"><span class="v4_154">+</span><span class="v4_152">Add your picture</span>
+                <div class="v4_153"></div>
+            </div>
+            <div class="v4_179">
+                <div class="v4_180"><button type="submit" value="Generate Post" class="v4_181">Сontinue</button></div>
+                <!--input class="v4_181" type="submit" value="Generate Post"-->
+                
+            </div>
+            <div class="name"></div>
+        </div>
+    </div>
+</body>
+
+</html>
