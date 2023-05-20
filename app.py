@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import openai
+import os
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"
@@ -49,7 +50,16 @@ def index():
                 return render_template('index.html', instagram_post=instagram_post)
     
     return render_template('index.html')
-
+@app.route('/upload', methods=['POST'])
+def upload():
+    file = request.files['image']
+    if file:
+        filename = file.filename
+        file.save(os.path.join('static', 'uploaded_images', filename))
+        # Дальнейшая обработка файла - сохранение пути, проверки и т.д.
+        # Верните URL или путь к сохраненной картинке, чтобы его можно было использовать на странице
+    else:
+        # Обработка, если файл не был загружен
 
 
 if __name__ == '__main__':
