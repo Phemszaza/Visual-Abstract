@@ -32,6 +32,7 @@
 
 .v4_180:hover {
   background-color: #ad5a5a;
+  border-radius: 28px;
   color: #333;
 }
   .v4_109 {
@@ -402,6 +403,7 @@
     width: 165px;
     height: 43px;
     background: rgba(235,70,105,1);
+    border-radius: 28px;
     opacity: 1;
     position: absolute;
     top: 0px;
